@@ -1,0 +1,252 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&family=Labrada&family=Lato:wght@300&family=Open+Sans:ital@0;1&family=Poor+Story&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,200;1,400;1,600&family=Roboto+Condensed:ital,wght@1,300&family=Roboto:ital,wght@0,300;0,400;1,100&family=Ubuntu&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    list-style-type: none;
+}
+body{
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+   position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: rgba(173, 136, 16, 0);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+.container .left-side{
+    position: relative;
+    background: #3607c5;
+    padding: 40px;
+}
+.container .right-side{
+    position: relative;
+    background:whitesmoke;
+    padding: 40px;
+}
+
+.profileText{
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-bottom: 1px solid red;
+padding-bottom: 20px;
+}
+.profileText .image{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.profileText .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+h2{
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+h2 span{
+    font-size: 15px;
+    font-weight: 300;
+}
+.contactinfo{
+    padding-top:40px;
+}
+.contactinfo ul{
+    position: relative;
+}
+.contactinfo ul li{
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+.contactinfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color:burlywood;
+
+}
+.contactinfo ul li{
+    color: #fff;
+    font-size: 300;
+
+}
+
+
+.tittle{
+    color: rgb(5, 227, 68);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.contactinfo.education li{
+ margin-bottom: 10px;
+}
+.contactinfo.education h4{
+    letter-spacing:2px;
+    line-height: 20px;
+}
+
+.contactinfo.education h4 :nth-child(2){
+ color: white;
+
+}
+.contactinfo.education h5{
+    color:rgb(205, 12, 156);
+    
+    
+}
+.contactinfo.language .percent{
+
+    position: relative;
+    width: 100%;
+    height: 6px;
+    display: block;
+    margin-top: 5px;
+    background: #000;
+}
+.contactinfo.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: red;
+}
+
+/* right side  */
+.about{
+    margin-left: 30px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.tittle2{
+    color: rgb(212, 11, 48);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+
+}
+p{
+    color: #5c5757;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+    gap: 40px;
+}
+.about .box .year-company{
+    min-width: 150px;
+}
+.about .box .year-company h5{
+text-transform: uppercase;
+color: #e3821b;
+font-weight: 800;
+line-height: 25px;
+}
+.about .box .text h4{
+text-transform: uppercase;
+font-size: 15px;
+color: #2a7da2;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color: rgba(12, 238, 50, 0.999);
+    font-weight: 500;
+}
+.skills .box .percent{
+    position: relative;
+    width: 80%;
+    height: 10px;
+    background: rgb(105, 99, 99);
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(196, 15, 21);
+}
+.interest ul{
+    display: grid;
+    grid-template-columns:repeat(2,1fr)
+}
+.interest ul li{
+    margin: 10px 0;
+    color: rgb(24, 136, 206);
+}
+.btn{
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+   
+}
+button{
+    color: red;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    font-weight: 600;
+
+   
+}
+button:hover{
+    background-color: rgb(138, 80, 255);
+}
+
+
+@media (max-width:1000px) {
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+@media (max-width:600px) {
+   .about .box{
+    flex-direction: column;
+   } 
+   
+}
+
